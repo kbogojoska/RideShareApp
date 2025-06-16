@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+// <<<<<<< adding-google-auth
 
-import 'package:emk/widgets/route_card_history.dart';
-import '../models/route_model.dart';
-import 'routes_drivers_screen.dart';
+// import 'package:emk/widgets/route_card_history.dart';
+// import '../models/route_model.dart';
+// import 'routes_drivers_screen.dart';
+// =======
+// import 'package:ride_share/screens/profile_screen.dart';
+// import 'package:ride_share/widgets/route_card_history.dart';
+// import '../models/route_model.dart';
+// import '../widgets/app_menu.dart';
+// >>>>>>> main
 
 class HistoryScreen extends StatelessWidget {
   final List<RouteModel> historyRoutes = [
@@ -46,18 +53,14 @@ class HistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'History of finished routes',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Color(0xFF1F1047)),
         ),
-        backgroundColor: Colors.blue[900],
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => RoutesDriversScreen()),
-            );
-          },
-        ),
+        backgroundColor: Colors.white70,
+        actions: [
+          AppMenu(),
+        ],
+        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: historyRoutes.length,

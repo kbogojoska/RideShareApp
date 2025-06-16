@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:emk/screens/routes_drivers_screen.dart';
-import 'history_screen.dart';
-import '../models/profile_model.dart';
-import '../widgets/profile_card.dart';
+// <<<<<<< adding-google-auth
+// import 'package:emk/screens/routes_drivers_screen.dart';
+// =======
+// import '../widgets/app_menu.dart';
+// >>>>>>> main
+// import 'history_screen.dart';
+// import '../models/profile_model.dart';
+// import '../widgets/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {
   final ProfileModel profile = ProfileModel(
@@ -17,22 +21,18 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.white70,
         elevation: 0,
         title: const Text(
           'Profile Info',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Color(0xFF1F1047)),
         ),
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => RoutesDriversScreen()),
-            );
-          },
-        ),
+        actions: [
+          AppMenu(),
+        ],
+        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -43,10 +43,10 @@ class ProfileScreen extends StatelessWidget {
 
               Text(
                 'User Info',
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'Lato',
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue[900],
+                  color: Color(0xFF1F1047),
                 ),
               ),
               const SizedBox(height: 20),
@@ -57,7 +57,7 @@ class ProfileScreen extends StatelessWidget {
                 child: Icon(
                   Icons.person,
                   size: 50,
-                  color: Colors.blue[900],
+                  color: Color(0xFF1F1047),
                 ),
               ),
               const SizedBox(height: 80),
@@ -98,7 +98,7 @@ class ProfileScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue[900],
+                  backgroundColor: Color(0xFF1F1047),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
@@ -109,7 +109,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: const Text(
                   'View History',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'Lato',
                     color: Colors.white,
                     fontSize: 16,
                   ),
