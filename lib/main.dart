@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ride_share/screens/history_screen.dart';
-import 'package:ride_share/screens/login_screen.dart';
-import 'package:ride_share/screens/profile_screen.dart';
-import 'package:ride_share/screens/register_screen.dart';
-import 'package:ride_share/screens/routes_drivers_screen.dart';
-import 'package:ride_share/screens/routes_passengers_screen.dart';
-import 'package:ride_share/screens/welcome_screen.dart';
+import 'package:emk/screens/history_screen.dart';
+import 'package:emk/screens/login_screen.dart';
+import 'package:emk/screens/profile_screen.dart';
+import 'package:emk/screens/register_screen.dart';
+import 'package:emk/screens/routes_drivers_screen.dart';
+import 'package:emk/screens/routes_passengers_screen.dart';
+import 'package:emk/screens/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
